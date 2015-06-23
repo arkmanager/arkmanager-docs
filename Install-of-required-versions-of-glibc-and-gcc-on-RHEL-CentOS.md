@@ -1,14 +1,14 @@
 RHEL/CentOS 6.6 and below have an outdated version of glibc and gcc, you can make ARK server works manually upgrading these libraries:
 
 # prerequisites
-```
+```ssh
 yum groupinstall "Development tools"
 yum install glibc-devel.i686 glibc-i686
 ```
 
 # glibc
 
-```
+```ssh
 cd /tmp
 wget http://ftp.gnu.org/gnu/glibc/glibc-2.16.0.tar.gz
 tar -xvzf glibc-2.16.0.tar.gz
@@ -20,14 +20,14 @@ cd glibc-build
 
 We have to fix a little typo, so run:
 
-```
+```ssh
 nano +171 ../scripts/test-installation.pl
 ```
 and **replace** `if (/$ld_so_name/) {` with `if (/\Q$ld_so_name\E/) {`
 
 then install it:
 
-```
+```ssh
 make
 sudo make install
 ```
@@ -36,7 +36,7 @@ sudo make install
 
 This operation takes a lot of space! be sure to have enough!
 
-```
+```ssh
 cd /tmp
 wget ftp://ftp.gwdg.de/pub/misc/gcc/releases/gcc-4.6.4/gcc-4.6.4.tar.gz
 tar -xvzf gcc-4.6.4.tar.gz
