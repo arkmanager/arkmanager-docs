@@ -17,3 +17,8 @@ On CentOS/Fedora/Red Hat etc, lsof is located in /usr/bin. You need to specify i
 On Debian based distros, the lsof package is not installed by default. You have to manually install it:
 
 ```$ sudo apt-get install lsof```
+
+
+#### /lib64/libc.so.6: version `GLIBC_2.14' not found
+
+You're missing a dependency. Install atleast glibc-2.15 on your server.
