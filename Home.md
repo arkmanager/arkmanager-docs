@@ -8,6 +8,8 @@ Welcome to the ark-server-tools wiki!
 
 ### Troubleshooting
 
+Make sure to check your server logs for hints.
+
 #### lsof: command not found
 
 On CentOS/Fedora/Red Hat etc, lsof is located in /usr/bin. You need to specify it's path before running it as a non-root user: 
