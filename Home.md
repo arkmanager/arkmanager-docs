@@ -24,3 +24,14 @@ On Debian based distros, the lsof package is not installed by default. You have 
 #### /lib64/libc.so.6: version `GLIBC_2.14' not found
 
 You're missing a dependency. Install atleast glibc-2.15 on your server.
+
+#### `GameUserSettings.ini` is being overwritten and is losing all my settings
+
+Make sure your `GameUserSettings.ini` contains the following 2 lines:
+
+```
+[/Script/ShooterGame.ShooterGameUserSettings]
+Version=5
+```
+
+If the above doesn't work, make sure you haven't put any non-ascii characters into `GameUserSettings.ini`.
