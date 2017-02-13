@@ -25,6 +25,8 @@ On Debian based distros, the lsof package is not installed by default. You have 
 
 You're missing a dependency. Install atleast glibc-2.15 on your server.
 
+See [Install of required versions of glibc and gcc on RHEL CentOS](Install-of-required-versions-of-glibc-and-gcc-on-RHEL-CentOS)
+
 #### `GameUserSettings.ini` is being overwritten and is losing all my settings
 
 Make sure your `GameUserSettings.ini` contains the following 2 lines:
